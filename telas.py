@@ -567,7 +567,6 @@ class GenerosH(Toplevel): #Pagina do cadastro
 class Tela7(Toplevel): #Pagina do cadastro
     def __init__(self, original): #Inserindo inicialização
         self.frame_original = original
-        self.telalogin = 
         Toplevel.__init__(self)
         self.title('Escolha o conteúdo')       # Inserindo nome da janela
         self.geometry('300x647+540+15')    # Inserindo tamanho da janela
@@ -591,7 +590,7 @@ class Tela7(Toplevel): #Pagina do cadastro
 
     def abrirBotao5(self):
         self.hide()
-        self.abrir = Escolha(self.telalogin)
+        self.abrir = Escolha(self)
 
     def abrirBotao6(self):
         self.hide()
@@ -603,7 +602,7 @@ class Tela7(Toplevel): #Pagina do cadastro
 
     def voltar(self): # Comando para ir a próxima tela
         self.hide()
-        self.telalogin.show()
+        self.frame_original.show()
     def hide(self):  # Esconde a janela root
         self.withdraw()
     def show(self):  # Comando para mostrar essa tela novamente SE ela estiver no HIDE
